@@ -23,8 +23,16 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import database from '@react-native-firebase/database';
+
 
 const App: () => React$Node = () => {
+  database()
+  .ref('users/123')
+  .once('value')
+  .then(snapshot => {
+    console.log('User data: ', snapshot.val());
+  });
   return (
     <>
       <StatusBar barStyle="dark-content" />
