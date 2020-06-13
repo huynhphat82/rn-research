@@ -60,3 +60,8 @@ buck-out/
 
 /.history
 /.sonarlint
+package-lock.json
+
+# Firebase Config
+ios/GoogleService-Info.plist
+android/app/google-services.json

@@ -7,9 +7,23 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "install:clean": "rm -rf node_modules && rm -rf package-lock.json && npm install",
+    "pod:clean": "cd ios && rm -rf Pods && rm -rf Podfile.lock && pod install && cd ..",
+    "clean-android": "cd android && ./gradlew clean && cd ..",
+    "ios-clean": "npm run pod:clean && npm run ios",
+    "ios:debug": "npm run install:clean && npm run pod:clean && npm run ios",
+    "android:debug": "npm run install:clean && cd android && ./gradlew clean && npm run android",
+    "android:release": "cd android && ./gradlew clean && ./gradlew assembleRelease && cd ..",
+    "android:bundle": "cd android && ./gradlew clean && ./gradlew bundleRelease && cd ..",
+    "android:release:apk": "npm run install:clean && npm run android:release",
+    "android:release:bundle": "npm run install:clean && npm run android:bundle",
+    "bash-test": "bash test.sh"
   },
   "dependencies": {
+    "@react-native-firebase/app": "7.1.0",
+    "@react-native-firebase/auth": "7.1.0",
+    "@react-native-firebase/database": "7.1.0",
     "react": "16.11.0",
     "react-native": "0.62.2"
   },

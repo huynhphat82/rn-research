@@ -1,0 +1,50 @@
+#!/usr/bin/env sh
+
+# /usr/bin/env bash
+
+# $1: env[dev|staging|prod], $2 type[debug|releas, $3: extension[apk|bundle]
+
+ENV=$1
+PLATFORM=$2
+TYPE=$3
+EXT=$4
+
+echo "\n=====> Command for building app:"
+echo "\t ./build [env: dev|staging|prod] [platform: android|ios] [type:debug|release] [ext: apk|bundle]\n"
+
+if [[ $PLATFORM != "android" ]] && [[ $PLATFORM != "ios" ]]; then
+  echo "Error: You missed to specify platform (android or ios)."
+  exit
+fi
+
+if [[ $ENV != "dev" ]] && [[ $ENV != "staging" ]] && [[ $ENV != "prod" ]]; then
+  ENV="dev"
+fi
+
+if [[ $TYPE != "release" ]] && [[ $TYPE != "debug" ]]; then
+  TYPE="debug"
+fi
+
+case "$EXT" in
+  "apk")
+    EXT=":$EXT"
+    ;;
+  "bundle")
+    EXT=":$EXT"
+    ;;
+  "")
+    EXT=""
+    ;;
+  *)
+    EXT=":apk"
+esac
+
+echo "=====> Switching To Environment: $ENV"
+./setenv "$ENV"
+
+echo "=====> Building: $PLATFORM $TYPE $EXT"
+
+npm run "$PLATFORM:$TYPE$EXT"
+
+echo "=====> Build success"
+

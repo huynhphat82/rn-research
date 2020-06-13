@@ -1,0 +1,35 @@
+#!/usr/bin/env sh
+
+# Root path that it contains the config files
+ENV_PATH='env'
+
+if [ "$APP_BRANCH" == "production" ] || [ "$1" == "prod" ] || [ "$1" == "production" ];
+then
+  echo "=====> Switching to Firebase Production Environment"
+  yes | cp -rf "$ENV_PATH/prod/google-services.json" android/app
+  yes | cp -rf "$ENV_PATH/prod/GoogleService-Info.plist" ios
+  echo "=====> Switch success"
+elif [ "$1" == "staging" ]
+then
+  echo "=====> Switching to Firebase Staging Environment"
+  yes | cp -rf "$ENV_PATH/staging/google-services.json" android/app
+  yes | cp -rf "$ENV_PATH/staging/GoogleService-Info.plist" ios
+  echo "=====> Switch success"
+elif [ "$1" == "dev" ]
+then
+  echo "=====> Switching to Firebase Dev Environment"
+  yes | cp -rf "$ENV_PATH/dev/google-services.json" android/app
+  yes | cp -rf "$ENV_PATH/dev/GoogleService-Info.plist" ios
+  echo "=====> Switch success"
+elif [ "$1" == "list" ]
+then
+  echo "\n===== Available Environments =====\n"
+  echo "ID\t\tFIREBASE PROJECT"
+  echo "production\tmy-production"
+  echo "prod\t\tmy-prod"
+  echo "staging\t\tmy-staging"
+  echo "dev\t\tmy-development"
+  echo "\n"
+else
+  echo "Run ‘sh env.sh list’ to list available environments."
+fi
