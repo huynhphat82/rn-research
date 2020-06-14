@@ -8,18 +8,21 @@ then
   echo "=====> Switching to Firebase Production Environment"
   yes | cp -rf "$ENV_PATH/prod/google-services.json" android/app
   yes | cp -rf "$ENV_PATH/prod/GoogleService-Info.plist" ios
+  yes | cp -rf "$ENV_PATH/prod/ApiKeys.js" src/config
   echo "=====> Switch success"
 elif [ "$1" == "staging" ]
 then
   echo "=====> Switching to Firebase Staging Environment"
   yes | cp -rf "$ENV_PATH/staging/google-services.json" android/app
   yes | cp -rf "$ENV_PATH/staging/GoogleService-Info.plist" ios
+  yes | cp -rf "$ENV_PATH/staging/ApiKeys.js" src/config
   echo "=====> Switch success"
 elif [ "$1" == "dev" ]
 then
   echo "=====> Switching to Firebase Dev Environment"
   yes | cp -rf "$ENV_PATH/dev/google-services.json" android/app
   yes | cp -rf "$ENV_PATH/dev/GoogleService-Info.plist" ios
+  yes | cp -rf "$ENV_PATH/dev/ApiKeys.js" src/config
   echo "=====> Switch success"
 elif [ "$1" == "list" ]
 then

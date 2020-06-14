@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>905127036423-mioutliv3pk68f8irmf2uihk3f3ik3q3.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.905127036423-mioutliv3pk68f8irmf2uihk3f3ik3q3</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>905127036423-0df3ckhcthcvpb5b33bgpoefs30qodjh.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDVj3d3YSK41VWF2_u3WTxi8pltng-nOMA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>905127036423</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.rn-framework</string>
+	<key>PROJECT_ID</key>
+	<string>react-native-chat-e94c6</string>
+	<key>STORAGE_BUCKET</key>
+	<string>react-native-chat-e94c6.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:905127036423:ios:2c5e5082fe057672060ca2</string>
+	<key>DATABASE_URL</key>
+	<string>https://react-native-chat-e94c6.firebaseio.com</string>
+</dict>
+</plist>
