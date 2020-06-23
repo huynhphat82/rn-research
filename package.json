@@ -11,7 +11,9 @@
   },
   "dependencies": {
     "react": "16.11.0",
-    "react-native": "0.62.2"
+    "react-native": "0.62.2",
+    "react-native-largelist-v3": "^3.0.15",
+    "react-native-spring-scrollview": "^2.0.23"
   },
   "devDependencies": {
     "@babel/core": "^7.10.2",
