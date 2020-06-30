@@ -11,7 +11,14 @@ import com.facebook.soloader.SoLoader;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
+// custom push notification
+// import android.app.NotificationChannel;
+// import android.app.NotificationManager;
+
 public class MainApplication extends Application implements ReactApplication {
+
+  // custom push notification
+  // public static final String FCM_CHANNEL_ID = "FCM_CHANNEL_ID";
 
   private final ReactNativeHost mReactNativeHost =
       new ReactNativeHost(this) {
@@ -45,6 +52,16 @@ public class MainApplication extends Application implements ReactApplication {
     super.onCreate();
     SoLoader.init(this, /* native exopackage */ false);
     initializeFlipper(this, getReactNativeHost().getReactInstanceManager());
+
+    // custom push notification
+    // if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+    //   NotificationChannel fcmChannel = new NotificationChannel(
+    //           FCM_CHANNEL_ID, "FCM_Channel", NotificationManager.IMPORTANCE_DEFAULT);
+
+    //   NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+
+    //   manager.createNotificationChannel(fcmChannel);
+    // }
   }
 
   /**
