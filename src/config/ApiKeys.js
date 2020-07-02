@@ -1,1 +1,1 @@
-export const GOOGLE_TRANSLATE_KEY = 'xxx';
+export const GOOGLE_TRANSLATE_KEY = 'yyy';
