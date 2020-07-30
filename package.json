@@ -10,10 +10,17 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@react-native-community/masked-view": "^0.1.10",
     "react": "16.11.0",
     "react-native": "0.62.2",
+    "react-native-gesture-handler": "^1.6.1",
     "react-native-largelist-v3": "^3.0.15",
-    "react-native-spring-scrollview": "^2.0.23"
+    "react-native-reanimated": "^1.9.0",
+    "react-native-redash": "^14.2.1",
+    "react-native-safe-area-context": "^3.0.7",
+    "react-native-snap-carousel": "^3.9.1",
+    "react-native-spring-scrollview": "^2.0.23",
+    "react-native-vector-icons": "^7.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.10.2",
