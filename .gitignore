@@ -60,3 +60,6 @@ buck-out/
 
 /.history
 /.sonarlint
+
+package-lock.json
+ios/Podfile.lock
