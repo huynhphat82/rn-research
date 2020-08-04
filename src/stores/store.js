@@ -6,11 +6,11 @@ import autoMergeLevel2 from 'redux-persist/es/stateReconciler/autoMergeLevel2';
 import {migrations} from './migrations';
 import {middlewares} from '../middlewares';
 
-const MIGRATION_MODE = false;
+const MIGRATION_MODE = true;
 
 const persistConfig = {
   key: 'root',
-  version: 2, // default: -1
+  version: 1, // default: -1
   storage: AsyncStorage,
   debug: MIGRATION_MODE,
   stateReconciler: autoMergeLevel2,
