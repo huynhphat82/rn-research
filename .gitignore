@@ -57,6 +57,9 @@ buck-out/
 
 # CocoaPods
 /ios/Pods/
+/ios/Podfile.lock
 
 /.history
 /.sonarlint
+
+package-lock.json
