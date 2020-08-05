@@ -1,10 +1,10 @@
 import {createStore, applyMiddleware} from 'redux';
 import {createMigrate, persistReducer, persistStore} from 'redux-persist';
 import AsyncStorage from '@react-native-community/async-storage';
-import {rootReducer} from './reducer';
 import autoMergeLevel2 from 'redux-persist/es/stateReconciler/autoMergeLevel2';
-import {migrations} from './migrations';
-import {middlewares} from '../middlewares';
+import {middlewares} from '@app/middlewares';
+import {migrations} from '@app/stores/migrations';
+import {rootReducer} from '@app/stores/reducer';
 
 const MIGRATION_MODE = true;
 
