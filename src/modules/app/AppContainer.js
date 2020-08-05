@@ -1,13 +1,16 @@
 import React from 'react';
-import {StatusBar} from 'react-native';
 import Stored from './Stored';
-import {Sample} from '@app/modules/sample';
+import StatusBar from '../../components/organisms/StatusBar';
+import AppNavigationContainer from '../../navigation';
+import {NavigationService} from '../../services';
 
 const AppContainer = () => {
   return (
     <Stored>
-      <StatusBar barStyle="dark-content" />
-      <Sample />
+      <StatusBar />
+      <AppNavigationContainer
+        ref={(ref) => NavigationService.setTopLevelNavigator(ref)}
+      />
     </Stored>
   );
 };

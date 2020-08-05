@@ -6,7 +6,7 @@ import {store, persistor} from '../../stores';
 const Stored = ({children}) => {
   return (
     <Provider {...{store}}>
-      <PersistGate loading={null} persistor={persistor}>
+      <PersistGate loading={null} {...{persistor}}>
         {children}
       </PersistGate>
     </Provider>

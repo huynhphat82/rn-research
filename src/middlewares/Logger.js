@@ -1,12 +1,14 @@
+import {Log} from '../services';
+
 /**
- * Logs all actions and states after they are dispatched.
+ * Logs all actions and states after they are dispatched
  */
-export const Logger = store => next => action => {
-  console.group(action.type);
-  console.log('[PrevState] => ', store.getState());
-  console.info('[Action] => ', action);
+export const Logger = (store) => (next) => (action) => {
+  Log.group(action.type);
+  Log.track('[PrevState] => ', store.getState());
+  Log.track('[Action] => ', action);
   let result = next(action);
-  console.log('[CurrentState] => ', store.getState());
-  console.groupEnd();
+  Log.track('[CurrentState] => ', store.getState());
+  Log.groupEnd();
   return result;
 };
