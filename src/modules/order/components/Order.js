@@ -4,7 +4,11 @@ import R from '../../../routes';
 import {useSafeArea} from 'react-native-safe-area-context';
 import {NavigationService} from '../../../services';
 import {batch} from 'react-redux';
-import { WithLoadingButton, useLockedTimeCallback, WithDelayInput } from '../../../components/hoc';
+import {
+  WithLoadingButton,
+  useLockedTimeCallback,
+  WithDelayInput,
+} from '../../../components/hoc';
 
 const Order = ({navigation}) => {
   const INSETS = useSafeArea();
